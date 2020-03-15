@@ -1,0 +1,44 @@
+{% extends 'adminlte/base.html' %}
+{% comment %} {% load static%} {% endcomment %}
+
+{% block content %}
+      <section class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Notifications</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Department</th>
+                  <th>Notification</th>
+                  
+
+                </tr>
+                </thead>
+                {% for notify in not_data %}
+                        <tr> 
+                            <td>{{ notify.department }}</td>
+                            <td>{{ notify.notification }}</td>
+                                               
+                        </tr>  
+                            
+                {% endfor %}
+                
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+
+{% endblock %}
+    
+
+
+    
+
+

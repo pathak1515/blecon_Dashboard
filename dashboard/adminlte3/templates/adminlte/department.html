@@ -1,0 +1,57 @@
+{% extends 'adminlte/base.html' %}
+{% comment %} {% load static%} {% endcomment %}
+
+{% block content %}
+  
+  <div class="row">
+      <div class="col-sm-12" id="table-height">
+          <table id="dtVerticalScrollExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+              <thead>
+                  <tr>
+                      <th>Department Name</th>
+                      <th>UUID</th>
+                      <th>Major</th>
+                      <th>Minor</th>
+                      
+
+                  </tr>
+              </thead>
+                {% for dept in dept_data %}
+                        <tr> 
+                            <td>{{ dept.name }}</td>
+                            <td>{{ dept.beacon.uuid }}</td>
+                            <td>{{ dept.beacon.major }}</td>
+                            <td>{{ dept.beacon.minor }}</td>                       
+                        </tr>  
+                            
+                {% endfor %}
+                    
+                    
+                            
+
+                      
+                    
+                    <!-- <td>{{ cat.cat_Image}} -->
+                    {% comment %} <td>
+                        
+                        <a href="{{ cat.cat_Image.url }}" target="_blank">
+                        <img src="{{ cat.cat_Image.url }}" height="50px" width="50px"></a>
+                        
+                    </td>
+
+                    <td>{{ cat.cat_Image_link}}</td>
+
+                    <td>{{ cat.Status_Btn}}</td> {% endcomment %}
+
+                    
+                        
+                    
+                
+          </table>
+      </div>
+  </div>
+
+{% endblock %}
+    
+
+

@@ -1,0 +1,46 @@
+{% extends 'adminlte/base.html' %}
+{% comment %} {% load static%} {% endcomment %}
+
+{% block content %}
+      <section class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Beacon</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>UUID</th>
+                  <th>Major</th>
+                  <th>Minor</th>
+                  <th>Status</th>
+
+                </tr>
+                </thead>
+                {% for beacon in beacon_data %}
+                        <tr> 
+                            <td>{{ beacon.uuid }}</td>
+                            <td>{{ beacon.major }}</td>
+                            <td>{{ beacon.minor }}</td> 
+                            <td>{{ beacon.status }}</td>                       
+                        </tr>  
+                            
+                {% endfor %}
+                
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+
+{% endblock %}
+    
+
+
+    
+
+
